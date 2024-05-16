@@ -37,7 +37,7 @@ def inversa_eliminacao(matriz: np.ndarray)-> np.ndarray:
                 factor = matriz[j][i]                
                 matriz[j,:]=matriz[j,:]-(factor * matriz[i,:])
                 inversa[j,:]=inversa[j,:]-(factor * inversa[i,:])
-                print(matriz[j])
+                
     return inversa
 
 A=inversa_eliminacao(A)
