@@ -24,8 +24,8 @@ def ludecomp(A: np.ndarray) -> np.ndarray:
         pivot = i + k
 
          # Coforme o Livro Ford exemplo 11.12 comando abaixo necessário para resolver qq matriz ainda que singular
-        if np.max(np.abs(A[pivot, i])) <= 1e-9:
-            break
+        if np.abs(A[pivot, i]) <= 1e-9:
+            continue
 
         
         if pivot!= i: # Fazendo as trocas de linhas
